@@ -1,15 +1,16 @@
-import 'package:board_pro/presenter/screens/login/widgets/valid_form.dart';
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class Updates extends StatefulWidget {
+
   @override
   State createState() {
-    return LoginScreenState();
+    return UpdatesState();
   }
 }
 
-class LoginScreenState extends State<LoginScreen> {
+class UpdatesState extends State<Updates> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,11 +28,11 @@ class LoginScreenState extends State<LoginScreen> {
                       padding: EdgeInsets.only(
                           left: MediaQuery.of(context).size.height / 40,
                           right: MediaQuery.of(context).size.height / 40),
-                      child: SignUpValidForm(),
+                      child: Container()
                     )),
               );
             },
           )),
-        ));
+        ));return Container();
   }
 }

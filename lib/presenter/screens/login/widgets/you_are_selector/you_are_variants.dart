@@ -1,4 +1,5 @@
-import 'package:board_pro/presenter/screens/login/view/you_are_selector/you_are_item.dart';
+
+import 'package:board_pro/presenter/screens/login/widgets/you_are_selector/you_are_item.dart';
 import 'package:flutter/material.dart';
 
 class YouAreVariants extends StatefulWidget {

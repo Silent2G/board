@@ -1,4 +1,3 @@
-
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:board_pro/services/app_localizations.dart';
 import 'package:flutter/material.dart';
@@ -12,11 +11,9 @@ class EmailWidget extends StatefulWidget {
   State createState() {
     return EmailWidgetState();
   }
-
 }
 
 class EmailWidgetState extends State<EmailWidget> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +25,9 @@ class EmailWidgetState extends State<EmailWidget> {
           if (email.isEmpty) {
             return AppLocalizations.of(context).translate("please_enter_email");
           } else {
-            return email.length < 6 ? AppLocalizations.of(context).translate("name_must_be") : null;
+            return email.length < 6
+                ? AppLocalizations.of(context).translate("name_must_be")
+                : null;
           }
         },
         onChanged: (String text) {},
@@ -54,7 +53,7 @@ class EmailWidgetState extends State<EmailWidget> {
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
-                Radius.circular(MediaQuery.of(context).size.height / 30)),
+                Radius.circular(MediaQuery.of(context).size.height / 55)),
             borderSide: BorderSide(width: 1.0, color: AppColors.RED),
           ),
           hintStyle: TextStyle(

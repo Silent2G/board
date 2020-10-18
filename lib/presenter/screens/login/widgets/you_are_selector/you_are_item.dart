@@ -23,7 +23,7 @@ class YouAreItemState extends State<YouAreItem> {
       decoration: BoxDecoration(
           border: Border.all(
               color: widget.selected ? AppColors.GREEN : Colors.transparent),
-      borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height / 40)),
+      borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height / 80)),
       child: GestureDetector(
         onTap: widget.voidCallback,
         child: Text(
@@ -31,7 +31,7 @@ class YouAreItemState extends State<YouAreItem> {
           style: TextStyle(
               color: AppColors.BLACK,
               fontStyle: FontStyle.normal,
-              fontSize: MediaQuery.of(context).size.height / 45,
+              fontSize: MediaQuery.of(context).size.height / 50,
               fontWeight: FontWeight.normal,
               fontFamily: "Roboto"),
         ),

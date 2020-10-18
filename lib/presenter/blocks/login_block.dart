@@ -1,0 +1,5 @@
+class LoginBlock {
+  void close() {
+
+  }
+}

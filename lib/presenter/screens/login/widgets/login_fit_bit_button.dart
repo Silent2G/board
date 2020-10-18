@@ -40,8 +40,8 @@ class LoginFitBitButton extends StatelessWidget {
             Align(
               alignment: Alignment(0.8, 0.0),
               child: Container(
-                width: MediaQuery.of(context).size.height / 18,
-                height: MediaQuery.of(context).size.height / 18,
+                width: MediaQuery.of(context).size.height / 20,
+                height: MediaQuery.of(context).size.height / 20,
                 child: Image(
                     image: AssetImage("assets/images/png/fit_bit_logo_2x.png")),
               ),

@@ -1,15 +1,17 @@
-import 'package:board_pro/presenter/screens/login/widgets/valid_form.dart';
+import 'package:board_pro/presenter/widgets/text.dart';
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
+
   @override
   State createState() {
-    return LoginScreenState();
+    return MinScreenState();
   }
 }
 
-class LoginScreenState extends State<LoginScreen> {
+class MinScreenState extends State<MainScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,14 +26,18 @@ class LoginScreenState extends State<LoginScreen> {
                       minHeight: viewportConstraints.maxHeight,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(
-                          left: MediaQuery.of(context).size.height / 40,
-                          right: MediaQuery.of(context).size.height / 40),
-                      child: SignUpValidForm(),
+                        padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.height / 40,
+                            right: MediaQuery.of(context).size.height / 40),
+                        child: Container(
+                          child: Center(
+                            child: TitleText("MainScreen"),
+                          ),
+                        )
                     )),
               );
             },
           )),
-        ));
+        ));return Container();
   }
 }

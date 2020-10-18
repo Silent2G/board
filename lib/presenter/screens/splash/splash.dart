@@ -1,5 +1,6 @@
 import 'package:board_pro/presenter/screens/login/login.dart';
-import 'package:board_pro/presenter/screens/splash/view/splash_image_widget.dart';
+import 'package:board_pro/presenter/screens/splash/widgets/splash_image_widget.dart';
+
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 

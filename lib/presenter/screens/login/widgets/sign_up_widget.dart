@@ -12,8 +12,8 @@ class SignUpWidget extends StatelessWidget {
         style: TextStyle(
             color: AppColors.BLACK,
             fontStyle: FontStyle.normal,
-            fontSize: MediaQuery.of(context).size.height / 45,
-            fontWeight: FontWeight.normal,
+            fontSize: MediaQuery.of(context).size.height / 50,
+            fontWeight: FontWeight.w500,
             fontFamily: "Roboto"),
       ),
     );

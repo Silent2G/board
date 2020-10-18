@@ -20,14 +20,14 @@ class DoneButton extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.only(
               top: MediaQuery.of(context).size.height / 60,
-              left: MediaQuery.of(context).size.height / 30,
-              right: MediaQuery.of(context).size.height / 30,
+              left: MediaQuery.of(context).size.height / 20,
+              right: MediaQuery.of(context).size.height / 20,
               bottom: MediaQuery.of(context).size.height / 60),
           child: Text(AppLocalizations.of(context).translate("done"),
               style: TextStyle(
                   color: AppColors.WHITE,
                   fontStyle: FontStyle.normal,
-                  fontSize: MediaQuery.of(context).size.height / 35,
+                  fontSize: MediaQuery.of(context).size.height / 50,
                   fontWeight: FontWeight.normal,
                   fontFamily: "Roboto")),
         ),

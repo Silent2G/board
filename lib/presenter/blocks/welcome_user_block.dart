@@ -1,0 +1,5 @@
+class WelcomeUserBlock {
+  void close() {
+
+  }
+}
