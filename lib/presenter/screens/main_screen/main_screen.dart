@@ -29,10 +29,14 @@ class MinScreenState extends State<MainScreen> {
                         padding: EdgeInsets.only(
                             left: MediaQuery.of(context).size.height / 40,
                             right: MediaQuery.of(context).size.height / 40),
-                        child: Container(
-                          child: Center(
-                            child: TitleText("MainScreen"),
-                          ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Center(
+                              child: TitleText("MainScreen"),
+                            ),
+                          ],
                         )
                     )),
               );

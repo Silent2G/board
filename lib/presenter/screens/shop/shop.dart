@@ -1,9 +1,8 @@
-import 'package:board_pro/presenter/widgets/text.dart';
+import 'package:board_pro/presenter/screens/shop/widgets/shop_item.dart';
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Shop extends StatefulWidget {
-
   @override
   State createState() {
     return ShopState();
@@ -11,33 +10,101 @@ class Shop extends StatefulWidget {
 }
 
 class ShopState extends State<Shop> {
+  List<ShopItem> list;
+
+  @override
+  void initState() {
+    list = createData();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Container(
-        color: AppColors.WHITE,
         child: Scaffold(
-          body: SafeArea(child: LayoutBuilder(
-            builder:
-                (BuildContext context, BoxConstraints viewportConstraints) {
-              return SingleChildScrollView(
-                child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minHeight: viewportConstraints.maxHeight,
+            body: Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [AppColors.BLUE_GRADIENT_DARK, AppColors.BLUE_GRADIENT_LIGHT],
+        ),
+      ),
+      child: SafeArea(
+          child: Container(
+        child: Padding(
+            padding: EdgeInsets.only(left: height / 40, right: height / 40),
+            child: Container(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Image.asset(
+                      "assets/images/png/board_scaffold.png",
+                      width: width * 0.5,
+                      height: height / 12,
                     ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.height / 40,
-                            right: MediaQuery.of(context).size.height / 40),
-                        child: Container(
-                          child: Center(
-                            child: TitleText("Shop"),
-                          ),
-                        )
-                    )),
-              );
-            },
-          )),
-        ));return Container();
+                  ),
+                  Container(
+                    child: Expanded(
+                      child: ListView.builder(
+                          scrollDirection: Axis.vertical,
+                          itemCount: list.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return list[index];
+                          }),
+                    ),
+                  ),
+                ],
+              ),
+            )),
+      )),
+    )));
+  }
+
+  List<ShopItem> createData() {
+    List<ShopItem> list;
+    list = [
+      ShopItem(
+          onPressed: () {
+            print("plastic");
+          },
+          title: "plastic",
+          path: "assets/images/png/yellow_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("wooden");
+          },
+          title: "wooden",
+          path: "assets/images/png/wooden_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("plastic");
+          },
+          title: "plastic",
+          path: "assets/images/png/yellow_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("wooden");
+          },
+          title: "wooden",
+          path: "assets/images/png/wooden_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("plastic");
+          },
+          title: "plastic",
+          path: "assets/images/png/yellow_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("wooden");
+          },
+          title: "wooden",
+          path: "assets/images/png/wooden_board.png"),
+    ];
+    return list;
   }
 }

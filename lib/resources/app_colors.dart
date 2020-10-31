@@ -9,5 +9,11 @@ class AppColors {
   static const Color BLUE = Color(0xFF3077C8);
   static const Color YELLOW = Color(0xFFDDEB1F);
   static const Color GRAY = Color(0xFFA9A9A9);
+  static const Color BLUE_GRADIENT_DARK = Color(0xFF1D2238);
+  static const Color BLUE_GRADIENT_LIGHT = Color(0xFF3076B0);
+  static const Color GREEN_LIGHT = Color(0xFF1CBE5E);
+  static const Color GREEN_DARK = Color(0xFF128A6E);
+  static const Color TRANSPARENT = Colors.transparent;
   static const Color BLACK = Colors.black;
+  static Color transparentBlack = Colors.black.withOpacity(0.4);
 }

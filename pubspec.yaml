@@ -69,7 +69,9 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
-
+    - family: Elektra
+      fonts:
+          - asset: assets/fonts/elektra.ttf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
