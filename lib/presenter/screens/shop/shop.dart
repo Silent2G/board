@@ -70,7 +70,7 @@ class ShopState extends State<Shop> {
     list = [
       ShopItem(
           onPressed: () {
-            print("plastic");
+            print("plastic_yellow");
           },
           title: "plastic",
           path: "assets/images/png/yellow_board.png"),
@@ -82,7 +82,13 @@ class ShopState extends State<Shop> {
           path: "assets/images/png/wooden_board.png"),
       ShopItem(
           onPressed: () {
-            print("plastic");
+            print("plastic_blue");
+          },
+          title: "plastic",
+          path: "assets/images/png/blue_board.png"),
+      ShopItem(
+          onPressed: () {
+            print("plastic_yellow");
           },
           title: "plastic",
           path: "assets/images/png/yellow_board.png"),
@@ -94,16 +100,10 @@ class ShopState extends State<Shop> {
           path: "assets/images/png/wooden_board.png"),
       ShopItem(
           onPressed: () {
-            print("plastic");
+            print("plastic_blue");
           },
           title: "plastic",
-          path: "assets/images/png/yellow_board.png"),
-      ShopItem(
-          onPressed: () {
-            print("wooden");
-          },
-          title: "wooden",
-          path: "assets/images/png/wooden_board.png"),
+          path: "assets/images/png/blue_board.png"),
     ];
     return list;
   }
