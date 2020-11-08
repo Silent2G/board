@@ -1,0 +1,6 @@
+enum UpdateState {
+  DOWNLOAD,
+  NOT_CONNECTED,
+  UPGRADE,
+  UPDATED
+}

@@ -16,7 +16,7 @@ class TitleText extends StatelessWidget {
       this.size = 24,
       this.textAlign = TextAlign.center,
       this.overflow = TextOverflow.clip,
-      this.maxLines = 2,
+      this.maxLines,
       this.fontWeight,
       this.fontFamily});
 

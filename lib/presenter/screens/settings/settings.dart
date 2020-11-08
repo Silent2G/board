@@ -160,7 +160,8 @@ class SettingsState extends State<Settings> {
                             ],
                           ),
                         )),
-                      )
+                      ),
+                      // SizedBox(height: height / 3),
                     ],
                   ),
                 )),

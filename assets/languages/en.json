@@ -65,5 +65,6 @@
   "please_enter_email": "Please enter your email",
   "not_match": "Passwords do not match",
   "name_must_be": "Name must be at least 6 characters long",
-  "welcome_": "Welcome!"
+  "welcome_": "Welcome!",
+  "updates": "Updates"
 }
