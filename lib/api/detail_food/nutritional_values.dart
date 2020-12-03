@@ -6,52 +6,58 @@ part "nutritional_values.g.dart";
 class NutritionalValues {
 
   @JsonKey(name: "cholesterol")
-  int cholesterol;
+  double cholesterol;
 
   @JsonKey(name: "sodium")
-  int sodium;
+  double sodium;
 
   @JsonKey(name: "potassium")
-  int potassium;
+  double potassium;
 
   @JsonKey(name: "totalFat")
-  int totalFat;
+  double totalFat;
 
   @JsonKey(name: "transFat")
-  int transFat;
+  double transFat;
 
   @JsonKey(name: "saturatedFat")
-  int saturatedFat;
+  double saturatedFat;
 
   @JsonKey(name: "dietaryFiber")
-  int dietaryFiber;
+  double dietaryFiber;
 
   @JsonKey(name: "sugars")
-  int sugars;
+  double sugars;
 
   @JsonKey(name: "vitaminA")
-  int vitaminA;
+  double vitaminA;
 
   @JsonKey(name: "vitaminB12")
-  int vitaminB12;
+  double vitaminB12;
 
   @JsonKey(name: "vitaminB6")
-  int vitaminB6;
+  double vitaminB6;
 
   @JsonKey(name: "vitaminC")
-  int vitaminC;
+  double vitaminC;
 
   @JsonKey(name: "vitaminD")
-  int vitaminD;
+  double vitaminD;
 
   @JsonKey(name: "vitaminE")
-  int vitaminE;
+  double vitaminE;
 
   @JsonKey(name: "calcium")
-  int calcium;
+  double calcium;
 
   @JsonKey(name: "iron")
-  int iron;
+  double iron;
+
+  @JsonKey(name: "protein")
+  double protein;
+
+  @JsonKey(name: "totalCarbohydrate")
+  double totalCarbohydrate;
 
   NutritionalValues(
       this.cholesterol,
@@ -69,7 +75,9 @@ class NutritionalValues {
       this.vitaminD,
       this.vitaminE,
       this.calcium,
-      this.iron);
+      this.iron,
+      this.protein,
+      this.totalCarbohydrate);
 
   factory NutritionalValues.fromJson(Map<String, dynamic> json) =>
       _$NutritionalValuesFromJson(json);

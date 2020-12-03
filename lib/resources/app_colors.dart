@@ -21,6 +21,7 @@ class AppColors {
   static const Color GREEN_RIGHT = Color(0xFF67EB7C);
   static const Color BLUE_LEFT = Color(0xFF3035C8);
   static const Color BLUE_RIGHT = Color(0xFF67B6EB);
+  static const Color VIOLET_BORDER = Color(0xFF828AD5);
   static const Color TRANSPARENT = Colors.transparent;
   static const Color BLACK = Colors.black;
   static Color transparentBlack = Colors.black.withOpacity(0.4);

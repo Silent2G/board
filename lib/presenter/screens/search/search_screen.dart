@@ -1,6 +1,10 @@
+import 'package:board_pro/presenter/screens/search_item/search_item_screen.dart';
 import 'package:board_pro/presenter/screens/updates/widgets/close_button_widget.dart';
+import 'package:board_pro/presenter/widgets/text.dart';
 import 'package:board_pro/resources/app_colors.dart';
+import 'package:board_pro/services/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -37,7 +41,25 @@ class SearchScreenState extends State<SearchScreen> {
                       SizedBox(
                         height: height / 20,
                       ),
-
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SearchItemScreen()));
+                        },
+                        child: TitleText("click"),
+                      ),
+                      SearchInputText(
+                          hint: AppLocalizations.of(context).translate("type"),
+                          size: height / 50,
+                          suffixIcon: Container(
+                            padding: EdgeInsets.all(12),
+                            child: SvgPicture.asset(
+                              "assets/images/svg/ic_search.svg",
+                              color: AppColors.GRAY,
+                            ),
+                          )),
                     ],
                   ),
                 )),

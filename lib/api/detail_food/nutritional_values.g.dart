@@ -8,22 +8,24 @@ part of 'nutritional_values.dart';
 
 NutritionalValues _$NutritionalValuesFromJson(Map<String, dynamic> json) {
   return NutritionalValues(
-    json['cholesterol'] as int,
-    json['sodium'] as int,
-    json['potassium'] as int,
-    json['totalFat'] as int,
-    json['transFat'] as int,
-    json['saturatedFat'] as int,
-    json['dietaryFiber'] as int,
-    json['sugars'] as int,
-    json['vitaminA'] as int,
-    json['vitaminB12'] as int,
-    json['vitaminB6'] as int,
-    json['vitaminC'] as int,
-    json['vitaminD'] as int,
-    json['vitaminE'] as int,
-    json['calcium'] as int,
-    json['iron'] as int,
+    (json['cholesterol'] as num)?.toDouble(),
+    (json['sodium'] as num)?.toDouble(),
+    (json['potassium'] as num)?.toDouble(),
+    (json['totalFat'] as num)?.toDouble(),
+    (json['transFat'] as num)?.toDouble(),
+    (json['saturatedFat'] as num)?.toDouble(),
+    (json['dietaryFiber'] as num)?.toDouble(),
+    (json['sugars'] as num)?.toDouble(),
+    (json['vitaminA'] as num)?.toDouble(),
+    (json['vitaminB12'] as num)?.toDouble(),
+    (json['vitaminB6'] as num)?.toDouble(),
+    (json['vitaminC'] as num)?.toDouble(),
+    (json['vitaminD'] as num)?.toDouble(),
+    (json['vitaminE'] as num)?.toDouble(),
+    (json['calcium'] as num)?.toDouble(),
+    (json['iron'] as num)?.toDouble(),
+    (json['protein'] as num)?.toDouble(),
+    (json['totalCarbohydrate'] as num)?.toDouble(),
   );
 }
 
@@ -45,4 +47,6 @@ Map<String, dynamic> _$NutritionalValuesToJson(NutritionalValues instance) =>
       'vitaminE': instance.vitaminE,
       'calcium': instance.calcium,
       'iron': instance.iron,
+      'protein': instance.protein,
+      'totalCarbohydrate': instance.totalCarbohydrate,
     };

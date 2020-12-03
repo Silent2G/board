@@ -34,3 +34,42 @@ class TitleText extends StatelessWidget {
             fontWeight: fontWeight));
   }
 }
+
+class SearchInputText extends StatelessWidget {
+  final String hint;
+  final double size;
+  final Color textColor;
+  final String fontFamily;
+  final TextEditingController textEditingController;
+  final Widget suffixIcon;
+
+  SearchInputText({
+    this.hint,
+    this.size,
+    this.textColor,
+    this.fontFamily,
+    this.textEditingController,
+    this.suffixIcon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    return TextFormField(
+      controller: textEditingController,
+      decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: TextStyle(
+            fontFamily: fontFamily != null ? fontFamily : "Roboto",
+            fontSize: size,
+            fontWeight: FontWeight.w400,
+            color: textColor != null ? textColor : AppColors.BLACK),
+        suffixIcon: Container(
+          child: suffixIcon,
+        ),
+      ),
+      onChanged: (text) {},
+      onSaved: (text) {},
+    );
+  }
+}
