@@ -95,7 +95,7 @@ List<BoardNotification> list = [
       3,
       "Smart cutting board 2.0 available now!",
       "Tap here to check it out",
-      "R",
+      "U",
       "B",
       "https://itarena.ua/agenda/",
       "U",

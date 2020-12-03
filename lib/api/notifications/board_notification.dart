@@ -31,7 +31,7 @@ class BoardNotification {
   BoardNotification(this.id, this.name, this.description, this.notifType, this.color,
       this.actionLink, this.iconType, this.created);
 
-  factory BoardNotification.fromJson(Map<String, dynamic> json) => _$NotificationFromJson(json);
+  factory BoardNotification.fromJson(Map<String, dynamic> json) => _$BoardNotificationFromJson(json);
 
-  Map<String, dynamic> toJson() => _$NotificationToJson(this);
+  Map<String, dynamic> toJson() => _$BoardNotificationToJson(this);
 }

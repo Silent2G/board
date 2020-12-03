@@ -6,7 +6,7 @@ part of 'board_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-BoardNotification _$NotificationFromJson(Map<String, dynamic> json) {
+BoardNotification _$BoardNotificationFromJson(Map<String, dynamic> json) {
   return BoardNotification(
     json['id'] as int,
     json['name'] as String,
@@ -19,7 +19,7 @@ BoardNotification _$NotificationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$NotificationToJson(BoardNotification instance) =>
+Map<String, dynamic> _$BoardNotificationToJson(BoardNotification instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
