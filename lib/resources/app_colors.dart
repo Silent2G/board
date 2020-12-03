@@ -15,6 +15,12 @@ class AppColors {
   static const Color BLUE_GRADIENT_LIGHT = Color(0xFF3076B0);
   static const Color GREEN_LIGHT = Color(0xFF1CBE5E);
   static const Color GREEN_DARK = Color(0xFF128A6E);
+  static const Color MAIN_BOTTOM = Color(0xFF7A76BC);
+  static const Color MAIN_TOP = Color(0xFFC6A0AB);
+  static const Color GREEN_LEFT = Color(0xFF30C848);
+  static const Color GREEN_RIGHT = Color(0xFF67EB7C);
+  static const Color BLUE_LEFT = Color(0xFF3035C8);
+  static const Color BLUE_RIGHT = Color(0xFF67B6EB);
   static const Color TRANSPARENT = Colors.transparent;
   static const Color BLACK = Colors.black;
   static Color transparentBlack = Colors.black.withOpacity(0.4);

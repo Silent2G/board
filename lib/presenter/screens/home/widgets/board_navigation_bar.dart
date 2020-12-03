@@ -23,7 +23,7 @@ class BoardNavigationBar extends StatelessWidget {
             icon: Container(
               child: SvgPicture.asset(
                 "assets/images/svg/ic_home.svg",
-                width: width / 28,
+                width: height / 28,
                 height: height / 28,
                 color: selectedIndex == 0 ? AppColors.RED : AppColors.GRAY,
               ),
@@ -34,7 +34,7 @@ class BoardNavigationBar extends StatelessWidget {
             icon: Container(
               child: SvgPicture.asset(
                 "assets/images/svg/ic_bag_shop.svg",
-                width: width / 28,
+                width: height / 28,
                 height: height / 28,
                 color: selectedIndex == 1 ? AppColors.RED : AppColors.GRAY,
               ),
@@ -45,7 +45,7 @@ class BoardNavigationBar extends StatelessWidget {
             icon: Container(
               child: SvgPicture.asset(
                 "assets/images/svg/ic_filter.svg",
-                width: width / 28,
+                width: height / 28,
                 height: height / 28,
                 color: selectedIndex == 2 ? AppColors.RED : AppColors.GRAY,
               ),

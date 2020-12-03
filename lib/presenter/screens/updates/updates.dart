@@ -103,6 +103,5 @@ class UpdatesState extends State<Updates> {
                 )),
           ),
         ));
-    return Container();
   }
 }

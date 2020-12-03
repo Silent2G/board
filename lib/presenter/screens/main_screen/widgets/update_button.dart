@@ -7,6 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class UpdateButton extends StatefulWidget {
+  final UpdatesState updatesState;
+
+  UpdateButton({this.updatesState});
+
   @override
   State createState() {
     return UpdateButtonState();
