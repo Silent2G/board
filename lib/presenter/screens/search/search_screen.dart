@@ -1,4 +1,10 @@
-import 'package:board_pro/presenter/screens/search_item/search_item_screen.dart';
+import 'dart:async';
+
+import 'package:board_pro/api/food_search/default_unit.dart';
+import 'package:board_pro/api/food_search/food_item.dart';
+import 'package:board_pro/presenter/screens/search/widgets/hint_widget.dart';
+import 'package:board_pro/presenter/screens/search/widgets/search_head_widget.dart';
+import 'package:board_pro/presenter/screens/search/widgets/search_item_widget.dart';
 import 'package:board_pro/presenter/screens/updates/widgets/close_button_widget.dart';
 import 'package:board_pro/presenter/widgets/text.dart';
 import 'package:board_pro/resources/app_colors.dart';
@@ -7,17 +13,71 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SearchScreen extends StatefulWidget {
+  final double weight;
+
+  SearchScreen({@required this.weight});
+
   @override
   State createState() {
     return SearchScreenState();
   }
 }
 
+List<FoodItem> list = [
+  FoodItem("PUBLIC", 570, 100, DefaultUnit(147, "gram", "grams"), 18828,
+      "en_US", "Chocolate, Milk", [226, 180, 147, 389]),
+  FoodItem("PRIVATE", 564, 100, DefaultUnit(147, "gram", "grams"), 14823,
+      "en_US", "Chocolate, Bitter", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 488, 100, DefaultUnit(147, "gram", "grams"), 23500,
+      "en_US", "Chocolate, Bounty", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 570, 100, DefaultUnit(147, "gram", "grams"), 18828,
+      "en_US", "Chocolate, Milk", [226, 180, 147, 389]),
+  FoodItem("PRIVATE", 564, 100, DefaultUnit(147, "gram", "grams"), 14823,
+      "en_US", "Chocolate, Bitter", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 488, 100, DefaultUnit(147, "gram", "grams"), 23500,
+      "en_US", "Chocolate, Bounty", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 570, 100, DefaultUnit(147, "gram", "grams"), 18828,
+      "en_US", "Chocolate, Milk", [226, 180, 147, 389]),
+  FoodItem("PRIVATE", 564, 100, DefaultUnit(147, "gram", "grams"), 14823,
+      "en_US", "Chocolate, Bitter", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 488, 100, DefaultUnit(147, "gram", "grams"), 23500,
+      "en_US", "Chocolate, Bounty", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 570, 100, DefaultUnit(147, "gram", "grams"), 18828,
+      "en_US", "Chocolate, Milk", [226, 180, 147, 389]),
+  FoodItem("PRIVATE", 564, 100, DefaultUnit(147, "gram", "grams"), 14823,
+      "en_US", "Chocolate, Bitter", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 488, 100, DefaultUnit(147, "gram", "grams"), 23500,
+      "en_US", "Chocolate, Bounty", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 570, 100, DefaultUnit(147, "gram", "grams"), 18828,
+      "en_US", "Chocolate, Milk", [226, 180, 147, 389]),
+  FoodItem("PRIVATE", 564, 100, DefaultUnit(147, "gram", "grams"), 14823,
+      "en_US", "Chocolate, Bitter", [226, 180, 147, 389]),
+  FoodItem("PUBLIC", 488, 100, DefaultUnit(147, "gram", "grams"), 23500,
+      "en_US", "Chocolate, Bounty", [226, 180, 147, 389]),
+];
+
 class SearchScreenState extends State<SearchScreen> {
+  bool userSearched;
+  double containerHeight;
+  bool isFirstBuild;
+
+  @override
+  void initState() {
+    userSearched = false;
+    isFirstBuild = false;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    if (!isFirstBuild) {
+      containerHeight = height / 5.5;
+      isFirstBuild = true;
+    }
+
     return Container(
         color: AppColors.WHITE,
         child: Scaffold(
@@ -39,27 +99,63 @@ class SearchScreenState extends State<SearchScreen> {
                         child: CloseButtonWidget(),
                       ),
                       SizedBox(
-                        height: height / 20,
+                        height: height / 40,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SearchItemScreen()));
-                        },
-                        child: TitleText("click"),
+                      SearchHeadWidget(
+                        weight: widget.weight,
+                        userSearched: userSearched,
+                        height: containerHeight,
                       ),
                       SearchInputText(
-                          hint: AppLocalizations.of(context).translate("type"),
-                          size: height / 50,
-                          suffixIcon: Container(
+                        hint: AppLocalizations.of(context).translate("type"),
+                        size: height / 45,
+                        suffixIcon: Container(
                             padding: EdgeInsets.all(12),
-                            child: SvgPicture.asset(
-                              "assets/images/svg/ic_search.svg",
-                              color: AppColors.GRAY,
-                            ),
-                          )),
+                            child: Container(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: SvgPicture.asset(
+                                  "assets/images/svg/ic_search.svg",
+                                  color: AppColors.BLACK.withOpacity(0.5),
+                                ),
+                              ),
+                            )),
+                        onChanged: (String value) {
+                          if (value.isNotEmpty) {
+                            setState(() {
+                              userSearched = true;
+                              containerHeight = 0;
+                              print("0");
+                            });
+                          } else {
+                            setState(() {
+                              Timer(Duration(milliseconds: 300), () {
+                                setState(() {
+                                  userSearched = false;
+                                  print("1");
+                                });
+                              });
+                              containerHeight = height / 5.5;
+                            });
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: height / 60,
+                      ),
+                      Container(
+                        child: HintWidget(
+                          searched: userSearched,
+                        ),
+                      ),
+                      Expanded(
+                        child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            itemCount: list.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return SearchItemWidget(item: list[index]);
+                            }),
+                      ),
                     ],
                   ),
                 )),

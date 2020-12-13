@@ -25,8 +25,12 @@ class ArcProgressBar extends StatelessWidget {
           child: SearchWidget(
             searchEnum: searchState,
             function: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SearchScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SearchScreen(
+                            weight: 232.6,
+                          )));
             },
           ),
         ),

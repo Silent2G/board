@@ -42,34 +42,49 @@ class SearchInputText extends StatelessWidget {
   final String fontFamily;
   final TextEditingController textEditingController;
   final Widget suffixIcon;
+  final Function(String) onChanged;
+  final Function(String) onSaved;
 
-  SearchInputText({
-    this.hint,
-    this.size,
-    this.textColor,
-    this.fontFamily,
-    this.textEditingController,
-    this.suffixIcon,
-  });
+  SearchInputText(
+      {this.hint,
+      this.size,
+      this.textColor,
+      this.fontFamily,
+      this.textEditingController,
+      this.suffixIcon,
+      this.onChanged,
+      this.onSaved});
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    return TextFormField(
-      controller: textEditingController,
-      decoration: InputDecoration(
-        hintText: hint,
-        hintStyle: TextStyle(
-            fontFamily: fontFamily != null ? fontFamily : "Roboto",
-            fontSize: size,
-            fontWeight: FontWeight.w400,
-            color: textColor != null ? textColor : AppColors.BLACK),
-        suffixIcon: Container(
-          child: suffixIcon,
-        ),
+    return Container(
+      padding: EdgeInsets.only(left: height / 60),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(height / 50),
+        color: AppColors.GRAY.withOpacity(0.2)
       ),
-      onChanged: (text) {},
-      onSaved: (text) {},
+      child: TextFormField(
+        controller: textEditingController,
+        decoration: InputDecoration(
+          hintText: hint,
+          border: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          errorBorder: InputBorder.none,
+          disabledBorder: InputBorder.none,
+          hintStyle: TextStyle(
+              fontFamily: fontFamily != null ? fontFamily : "Roboto",
+              fontSize: size,
+              fontWeight: FontWeight.w400,
+              color: textColor != null ? textColor : AppColors.BLACK.withOpacity(0.3)),
+          suffixIcon: Container(
+            child: suffixIcon,
+          ),
+        ),
+        onChanged: onChanged,
+        onSaved: onSaved,
+      ),
     );
   }
 }

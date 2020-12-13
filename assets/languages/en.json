@@ -84,5 +84,9 @@
   "iron": "Iron",
   "sync_it": "Sync it!",
   "add_fit_bit": "Add your fitbit account to unlock this feature",
-  "type": "type the product name..."
+  "type": "type the product name...",
+  "search_what": "Search what you want",
+  "search_results": "Search results",
+  "note": "Note, that to track you ration correctly you \nshould pick the naming of ready form of \ningredient you weigth"
+
 }
