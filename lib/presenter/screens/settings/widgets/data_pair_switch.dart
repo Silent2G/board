@@ -28,7 +28,7 @@ class DataPairSwitchState extends State<DataPairSwitch> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,9 +38,10 @@ class DataPairSwitchState extends State<DataPairSwitch> {
                   child: TitleText(
                     AppLocalizations.of(context).translate(widget.title),
                     fontFamily: "Roboto",
+                    textAlign: TextAlign.left,
                     fontWeight: FontWeight.w700,
                     textColor: AppColors.BLACK,
-                    size: height / 60,
+                    size: height / 50,
                   ),
                 ),
                 SizedBox(height: height / 160),
@@ -48,9 +49,10 @@ class DataPairSwitchState extends State<DataPairSwitch> {
                   child: TitleText(
                     AppLocalizations.of(context).translate(widget.value),
                     fontFamily: "Roboto",
+                    textAlign: TextAlign.left,
                     fontWeight: FontWeight.w400,
                     textColor: AppColors.BLACK,
-                    size: height / 78,
+                    size: height / 55,
                   ),
                 ),
               ],

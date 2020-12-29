@@ -31,13 +31,14 @@ class SearchBlockWidgetState extends State<SearchBlockWidget> {
               getStringByState(),
               textColor: AppColors.BLACK,
               size: height / 60,
+              height: 1.5,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: height / 50),
+          SizedBox(height: height / 40),
           Container(
-            width: height / 5,
-            height: height / 5,
+            width: height / 4,
+            height: height / 4,
             child: ArcProgressBar(
               foregroundColor: AppColors.WHITE,
               searchState: widget.searchState,

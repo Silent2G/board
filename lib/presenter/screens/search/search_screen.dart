@@ -74,7 +74,7 @@ class SearchScreenState extends State<SearchScreen> {
     double width = MediaQuery.of(context).size.width;
 
     if (!isFirstBuild) {
-      containerHeight = height / 5.5;
+      containerHeight = height / 4.5;
       isFirstBuild = true;
     }
 
@@ -110,7 +110,7 @@ class SearchScreenState extends State<SearchScreen> {
                         hint: AppLocalizations.of(context).translate("type"),
                         size: height / 45,
                         suffixIcon: Container(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(15),
                             child: Container(
                               child: GestureDetector(
                                 onTap: () {},
@@ -135,7 +135,7 @@ class SearchScreenState extends State<SearchScreen> {
                                   print("1");
                                 });
                               });
-                              containerHeight = height / 5.5;
+                              containerHeight = height / 4.5;
                             });
                           }
                         },

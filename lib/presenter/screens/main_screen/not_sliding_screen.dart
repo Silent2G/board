@@ -54,7 +54,7 @@ class NotSlidingScreenState extends State<NotSlidingScreen> {
                       SizedBox(height: height / 10),
                       Container(
                         child: Center(
-                          child: SearchBlockWidget(searchState: SearchState.SYNC),
+                          child: SearchBlockWidget(searchState: SearchState.NOT_SYNC),
                         ),
                       )
                     ],

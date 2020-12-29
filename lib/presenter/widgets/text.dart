@@ -8,6 +8,7 @@ class TitleText extends StatelessWidget {
   final TextAlign textAlign;
   final TextOverflow overflow;
   final int maxLines;
+  final double height;
   final FontWeight fontWeight;
   final String fontFamily;
 
@@ -18,7 +19,8 @@ class TitleText extends StatelessWidget {
       this.overflow = TextOverflow.clip,
       this.maxLines,
       this.fontWeight,
-      this.fontFamily});
+      this.fontFamily,
+      this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class TitleText extends StatelessWidget {
         style: TextStyle(
             color: (textColor == null) ? AppColors.BLACK : textColor,
             fontSize: size,
+            height: height,
             fontStyle: FontStyle.normal,
             fontFamily: fontFamily != null ? fontFamily : "Roboto",
             fontWeight: fontWeight));

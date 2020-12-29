@@ -25,7 +25,7 @@ class ChooseRainbowWidgetState extends State<ChooseRainbowWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,8 +36,9 @@ class ChooseRainbowWidgetState extends State<ChooseRainbowWidget> {
                     AppLocalizations.of(context).translate("choose"),
                     fontFamily: "Roboto",
                     fontWeight: FontWeight.w700,
+                    textAlign: TextAlign.left,
                     textColor: AppColors.BLACK,
-                    size: height / 60,
+                    size: height / 50,
                   ),
                 ),
                 SizedBox(height: height / 160),
@@ -48,7 +49,7 @@ class ChooseRainbowWidgetState extends State<ChooseRainbowWidget> {
                     textAlign: TextAlign.left,
                     fontWeight: FontWeight.w400,
                     textColor: AppColors.BLACK,
-                    size: height / 78,
+                    size: height / 55,
                   ),
                 ),
               ],
@@ -63,7 +64,7 @@ class ChooseRainbowWidgetState extends State<ChooseRainbowWidget> {
               textAlign: TextAlign.left,
               fontWeight: FontWeight.w400,
               textColor: AppColors.BLACK,
-              size: height / 78,
+              size: height / 55,
             ),
           ))
         ],

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class ShadowWrap extends StatelessWidget {
   final Widget child;
+  final BoxShadow shadow;
 
-  ShadowWrap({this.child});
+  ShadowWrap({this.child, this.shadow});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +14,13 @@ class ShadowWrap extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(height / 80)),
             boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-              )
+              shadow != null
+                  ? shadow
+                  : BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                    )
             ]),
         child: Container(
             width: MediaQuery.of(context).size.width,

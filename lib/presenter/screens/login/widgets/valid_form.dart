@@ -22,22 +22,27 @@ class SignUpValidForm extends StatefulWidget {
 class SignUpValidFormState extends State<SignUpValidForm> {
   final _formKey = GlobalKey<FormState>();
   LoginBlock _loginBlock;
+  TextEditingController nameController;
+  TextEditingController emailController;
 
   @override
   void initState() {
     _loginBlock = LoginBlock();
+    nameController = TextEditingController();
+    emailController = TextEditingController();
     super.initState();
   }
 
   @override
   void dispose() {
-   _loginBlock.close();
+    _loginBlock.close();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    final node = FocusScope.of(context);
     return Container(
       child: Form(
           key: _formKey,
@@ -63,11 +68,29 @@ class SignUpValidFormState extends State<SignUpValidForm> {
               ),
               SizedBox(height: height / 35),
               Container(
-                child: EditNameWidget("your_name"),
+                child: WillPopScope(
+                  onWillPop: () {
+                    print("fsgdhggsfafsgfdhgs");
+                    return editNamePop();
+                  },
+                  child: EditNameWidget(
+                    controller: nameController,
+                    hintValue: "your_name",
+                    node: node,
+                  ),
+                )
               ),
               SizedBox(height: height / 45),
               Container(
-                child: EmailWidget("email"),
+                child: WillPopScope(
+                  onWillPop: () {
+                    return editNamePop();
+                  },
+                  child: EmailWidget(
+                    hintValue: "email",
+                    node: node,
+                  ),
+                )
               ),
               SizedBox(height: height / 25),
               Container(
@@ -75,8 +98,8 @@ class SignUpValidFormState extends State<SignUpValidForm> {
               ),
               SizedBox(height: height / 10),
               DoneButton(() {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Home()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
               }),
               SizedBox(height: height / 20),
             ],
@@ -84,10 +107,16 @@ class SignUpValidFormState extends State<SignUpValidForm> {
     );
   }
 
+  Future<bool> editNamePop() async {
+    print("blalaaalalalalalallaalallala");
+    // FocusScope.of(context).unfocus();
+    return Future.value(true);
+  }
+
   void validationFields() {
     if (_formKey.currentState.validate()) {
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => WelcomeUser()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => WelcomeUser()));
       print("validation success !");
     } else {
       print("not success !");

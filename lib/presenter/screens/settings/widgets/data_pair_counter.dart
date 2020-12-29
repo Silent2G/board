@@ -25,9 +25,10 @@ class DataPairCounterState extends State<DataPairCounter> {
       width: width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +40,7 @@ class DataPairCounterState extends State<DataPairCounter> {
                     fontFamily: "Roboto",
                     fontWeight: FontWeight.w700,
                     textColor: AppColors.BLACK,
-                    size: height / 60,
+                    size: height / 50,
                   ),
                 ),
                 SizedBox(height: height / 160),
@@ -50,7 +51,7 @@ class DataPairCounterState extends State<DataPairCounter> {
                     textAlign: TextAlign.left,
                     fontWeight: FontWeight.w400,
                     textColor: AppColors.BLACK,
-                    size: height / 78,
+                    size: height / 55,
                   ),
                 ),
               ],

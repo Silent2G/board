@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class EmailWidget extends StatefulWidget {
   final String hintValue;
+  final FocusNode node;
 
-  EmailWidget(this.hintValue);
+  EmailWidget({this.hintValue, this.node});
 
   @override
   State createState() {
@@ -20,7 +21,7 @@ class EmailWidgetState extends State<EmailWidget> {
       child: TextFormField(
         keyboardType: TextInputType.text,
         textCapitalization: TextCapitalization.sentences,
-        textInputAction: TextInputAction.next,
+        textInputAction: TextInputAction.done,
         validator: (email) {
           if (email.isEmpty) {
             return AppLocalizations.of(context).translate("please_enter_email");
@@ -31,8 +32,8 @@ class EmailWidgetState extends State<EmailWidget> {
           }
         },
         onChanged: (String text) {},
+        onFieldSubmitted: (_) => widget.node.unfocus(),
         autofocus: true,
-        onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
         style: TextStyle(
             fontSize: MediaQuery.of(context).size.width / 23,
             height: 24 / 16,

@@ -33,7 +33,7 @@ class DayItemWidget extends StatelessWidget {
             padding: EdgeInsets.only(left: height / 50),
             child: TitleText(
               checkDay(date, context),
-              size: height / 55,
+              size: height / 50,
               textColor: AppColors.BLACK,
               fontWeight: FontWeight.w400,
               textAlign: TextAlign.left,

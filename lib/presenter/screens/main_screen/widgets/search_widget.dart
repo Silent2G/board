@@ -34,8 +34,8 @@ class SearchWidgetState extends State<SearchWidget> {
           ? Container(
               child: TitleText(
                 widget.value.toString(),
-                fontWeight: FontWeight.w700,
-                fontFamily: "Roboto",
+                fontWeight: FontWeight.w400,
+                fontFamily: "Elektra",
                 textColor: AppColors.BLACK,
                 size: height / 40,
               ),
@@ -43,18 +43,20 @@ class SearchWidgetState extends State<SearchWidget> {
           : Container(
               child: TitleText(
                 "0.0 g",
-                fontWeight: FontWeight.w700,
-                fontFamily: "Roboto",
+                fontWeight: FontWeight.w400,
+                fontFamily: "Elektra",
                 textColor: AppColors.BLACK,
-                size: height / 30,
+                size: height / 25,
               ),
             );
     } else {
       return Container(
-          height: height / 20,
-          width: height / 20,
           child: Center(
-            child: SvgPicture.asset("assets/images/svg/bluetooth.svg"),
+            child: Container(
+              width: height / 17,
+              height: height / 17,
+              child: SvgPicture.asset("assets/images/svg/bluetooth.svg"),
+            ),
           ));
     }
   }

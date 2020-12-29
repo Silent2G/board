@@ -52,7 +52,7 @@ class SearchHeadWidgetState extends State<SearchHeadWidget> {
                         widget.weight.toString(),
                         textColor: AppColors.BLACK,
                         fontWeight: FontWeight.w500,
-                        fontFamily: "Elektra",
+                        // fontFamily: "Elektra",
                         size: height / 20,
                       ),
                     ),
@@ -61,15 +61,14 @@ class SearchHeadWidgetState extends State<SearchHeadWidget> {
                         " g",
                         textColor: AppColors.BLACK,
                         fontWeight: FontWeight.w500,
+                        // fontFamily: "Elektra",
                         size: height / 20,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: height / 20,
-              ),
+              Spacer(),
               Container(
                 alignment: Alignment.centerLeft,
                 child: TitleText(

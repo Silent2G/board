@@ -28,7 +28,7 @@ class BoardSoftWidgetState extends State<BoardSoftWidget> {
               AppLocalizations.of(context).translate("board_software"),
               fontFamily: "Roboto",
               fontWeight: FontWeight.w700,
-              size: height / 50,
+              size: height / 40,
             ),
           ),
           SizedBox(
@@ -39,7 +39,7 @@ class BoardSoftWidgetState extends State<BoardSoftWidget> {
               getVersion(),
               fontWeight: FontWeight.w400,
               fontFamily: "Roboto",
-              size: height / 55,
+              size: height / 45,
             ),
           )
         ],

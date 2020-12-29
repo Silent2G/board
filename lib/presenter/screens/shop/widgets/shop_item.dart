@@ -62,7 +62,7 @@ class ShopItemState extends State<ShopItem> {
                 child: TitleText(
                   AppLocalizations.of(context).translate(widget.title),
                   textColor: AppColors.WHITE,
-                  size: height / 52,
+                  size: height / 50,
                   fontWeight: FontWeight.w400,
                   fontFamily: "Roboto",
                 ),

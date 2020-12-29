@@ -3,9 +3,12 @@ import 'package:board_pro/services/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class EditNameWidget extends StatefulWidget {
+  final TextEditingController controller;
   final String hintValue;
 
-  EditNameWidget(this.hintValue);
+  final FocusNode node;
+
+  EditNameWidget({this.controller, this.hintValue, this.node});
 
   @override
   State createState() {
@@ -16,11 +19,14 @@ class EditNameWidget extends StatefulWidget {
 class EditNameWidgetState extends State<EditNameWidget> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
       child: TextFormField(
         keyboardType: TextInputType.text,
         textCapitalization: TextCapitalization.sentences,
         textInputAction: TextInputAction.next,
+        controller: widget.controller,
         validator: (name) {
           if (name.isEmpty) {
             return AppLocalizations.of(context).translate("please_enter_name");
@@ -32,9 +38,9 @@ class EditNameWidgetState extends State<EditNameWidget> {
         },
         onChanged: (String text) {},
         autofocus: true,
-        onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
+        onEditingComplete: () => widget.node.nextFocus(),
         style: TextStyle(
-            fontSize: MediaQuery.of(context).size.width / 23,
+            fontSize: height / 55,
             height: 24 / 16,
             letterSpacing: 0.35,
             fontWeight: FontWeight.w600,
@@ -43,21 +49,19 @@ class EditNameWidgetState extends State<EditNameWidget> {
           border: new OutlineInputBorder(
             borderSide: BorderSide(width: 1.0),
             borderRadius: BorderRadius.all(
-              Radius.circular(MediaQuery.of(context).size.height / 55),
+              Radius.circular(height / 55),
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-                Radius.circular(MediaQuery.of(context).size.height / 55)),
+            borderRadius: BorderRadius.all(Radius.circular(height / 55)),
             borderSide: BorderSide(width: 1.0, color: AppColors.BLUE_GREEN),
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-                Radius.circular(MediaQuery.of(context).size.height / 55)),
+            borderRadius: BorderRadius.all(Radius.circular(height / 55)),
             borderSide: BorderSide(width: 1.0, color: AppColors.RED),
           ),
           hintStyle: TextStyle(
-            fontSize: MediaQuery.of(context).size.width / 23,
+            fontSize: height / 55,
             fontWeight: FontWeight.w500,
             height: 24 / 16,
             letterSpacing: 0.35,
@@ -67,9 +71,7 @@ class EditNameWidgetState extends State<EditNameWidget> {
               ? AppLocalizations.of(context).translate(widget.hintValue)
               : null,
           contentPadding: EdgeInsets.only(
-              left: MediaQuery.of(context).size.height / 55,
-              bottom: MediaQuery.of(context).size.height / 55,
-              top: MediaQuery.of(context).size.height / 55),
+              left: height / 55, bottom: height / 55, top: height / 55),
         ),
       ),
     );

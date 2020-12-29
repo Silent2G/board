@@ -1,5 +1,6 @@
 
 import 'package:board_pro/presenter/screens/login/widgets/you_are_selector/you_are_variants.dart';
+import 'package:board_pro/presenter/widgets/text.dart';
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:board_pro/services/app_localizations.dart';
 import 'package:flutter/material.dart';
@@ -21,30 +22,16 @@ class YouAreSelectorState extends State<YouAreSelector> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            child: Text(
+            child: TitleText(
               AppLocalizations.of(context).translate("you_are"),
-              style: TextStyle(
-                  color: AppColors.BLACK,
-                  fontStyle: FontStyle.normal,
-                  fontSize: MediaQuery.of(context).size.height / 50,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: "Roboto"),
+              textColor: AppColors.BLACK,
+              size: MediaQuery.of(context).size.height / 50,
+              fontWeight: FontWeight.normal,
+              fontFamily: "Roboto",
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height / 100),
           YouAreVariants(),
-          SizedBox(height: MediaQuery.of(context).size.height / 80),
-          Container(
-            child: Text(
-              AppLocalizations.of(context).translate("none"),
-              style: TextStyle(
-                  color: AppColors.BLACK,
-                  fontStyle: FontStyle.normal,
-                  fontSize: MediaQuery.of(context).size.height / 50,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: "Roboto"),
-            ),
-          ),
         ],
       ),
     );

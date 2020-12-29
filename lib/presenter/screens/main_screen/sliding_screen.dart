@@ -5,7 +5,6 @@ import 'package:board_pro/resources/app_colors.dart';
 import 'package:board_pro/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SlidingScreen extends StatefulWidget {
   final String arrowPath;
@@ -32,7 +31,7 @@ class SlidingScreenState extends State<SlidingScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
-              height: height / 90,
+              height: height / 60,
             ),
             Container(
               child: SvgPicture.asset(
@@ -41,9 +40,6 @@ class SlidingScreenState extends State<SlidingScreen> {
                 width: height / 60,
                 height: height / 60,
               ),
-            ),
-            SizedBox(
-              height: height / 40,
             ),
             Expanded(
                 child: ScrollWrap(

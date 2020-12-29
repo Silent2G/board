@@ -1,4 +1,5 @@
 import 'package:board_pro/presenter/screens/login/widgets/valid_form.dart';
+import 'package:board_pro/presenter/widgets/scroll_wrap.dart';
 import 'package:board_pro/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -15,22 +16,14 @@ class LoginScreenState extends State<LoginScreen> {
     return Container(
         color: AppColors.WHITE,
         child: Scaffold(
-          body: SafeArea(child: LayoutBuilder(
-            builder:
-                (BuildContext context, BoxConstraints viewportConstraints) {
-              return SingleChildScrollView(
-                child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minHeight: viewportConstraints.maxHeight,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                          left: MediaQuery.of(context).size.height / 40,
-                          right: MediaQuery.of(context).size.height / 40),
-                      child: SignUpValidForm(),
-                    )),
-              );
-            },
+          body: SafeArea(
+              child: ScrollWrap(
+            child: Padding(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.height / 40,
+                  right: MediaQuery.of(context).size.height / 40),
+              child: SignUpValidForm(),
+            ),
           )),
         ));
   }

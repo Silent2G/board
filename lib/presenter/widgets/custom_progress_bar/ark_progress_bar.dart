@@ -37,6 +37,7 @@ class ArcProgressBar extends StatelessWidget {
         foregroundPainter: ArcProgressBarPainter(
           foregroundColor: foregroundColor,
           percentage: value,
+          strokeWidth: 20
         ),
       ),
     );

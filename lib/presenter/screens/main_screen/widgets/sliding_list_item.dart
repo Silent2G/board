@@ -26,6 +26,11 @@ class SlidingListItemState extends State<SlidingListItem> {
         padding: EdgeInsets.only(
             bottom: height / 70, left: height / 50, right: height / 50),
         child: ShadowWrap(
+          shadow: BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 5,
+            blurRadius: 7,
+          ),
           child: GestureDetector(
             onTap: () {
               print("click " + widget.notification.id.toString());
@@ -76,7 +81,7 @@ class SlidingListItemState extends State<SlidingListItem> {
                                   textColor: chooseTextColor(),
                                   fontWeight: FontWeight.w500,
                                   textAlign: TextAlign.left,
-                                  size: height / 60,
+                                  size: height / 53,
                                 )
                               : Container(),
                         ),
@@ -91,7 +96,7 @@ class SlidingListItemState extends State<SlidingListItem> {
                                   textColor: chooseTextColor(),
                                   fontWeight: FontWeight.w400,
                                   textAlign: TextAlign.left,
-                                  size: height / 68,
+                                  size: height / 58,
                                 )
                               : Container(),
                         ),

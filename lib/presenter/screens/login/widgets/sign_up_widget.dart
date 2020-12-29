@@ -13,7 +13,7 @@ class SignUpWidget extends StatelessWidget {
             color: AppColors.BLACK,
             fontStyle: FontStyle.normal,
             fontSize: MediaQuery.of(context).size.height / 50,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             fontFamily: "Roboto"),
       ),
     );
