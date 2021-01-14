@@ -34,7 +34,7 @@ class UpdateButtonWidgetState extends State<UpdateButtonWidget> {
                 choseButtonText(),
                 fontWeight: FontWeight.w400,
                 fontFamily: "Roboto",
-                size: height / 60,
+                size: height / 50,
                 textColor: AppColors.WHITE,
               ),
               color: choseButtonColor(),

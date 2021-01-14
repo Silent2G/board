@@ -35,7 +35,7 @@ class EmailWidgetState extends State<EmailWidget> {
         onFieldSubmitted: (_) => widget.node.unfocus(),
         autofocus: true,
         style: TextStyle(
-            fontSize: MediaQuery.of(context).size.width / 23,
+            fontSize: MediaQuery.of(context).size.height / 55,
             height: 24 / 16,
             letterSpacing: 0.35,
             fontWeight: FontWeight.w600,
@@ -58,7 +58,7 @@ class EmailWidgetState extends State<EmailWidget> {
             borderSide: BorderSide(width: 1.0, color: AppColors.RED),
           ),
           hintStyle: TextStyle(
-            fontSize: MediaQuery.of(context).size.width / 23,
+            fontSize: MediaQuery.of(context).size.height / 55,
             fontWeight: FontWeight.w500,
             height: 24 / 16,
             letterSpacing: 0.35,

@@ -39,7 +39,7 @@ class BoardButteryWidgetState extends State<BoardButteryWidget> {
               AppLocalizations.of(context).translate("board_battery"),
               textColor: AppColors.UPDATE_GRAY,
               fontWeight: FontWeight.w400,
-              size: height / 60,
+              size: height / 55, // text board buttery size
             ),
           )
         ],

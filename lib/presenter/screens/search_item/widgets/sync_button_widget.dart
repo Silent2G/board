@@ -22,14 +22,14 @@ class SyncButtonWidget extends StatelessWidget {
           Container(
             child: ColorButton(
                 onPressed: () {},
-                height: height / 20,
+                height: height / 17,
                 text: AppLocalizations.of(context).translate("sync_it"),
                 color: isFitBitSync
-                    ? AppColors.SWITCH_LIGHT_GREEN
+                    ? AppColors.GREEN
                     : AppColors.UPDATE_GRAY),
           ),
           SizedBox(
-            height: height / 150,
+            height: height / 110,
           ),
           Container(
               child: Visibility(
@@ -37,7 +37,7 @@ class SyncButtonWidget extends StatelessWidget {
             child: TitleText(
               AppLocalizations.of(context).translate("add_fit_bit"),
               textColor: AppColors.UPDATE_GRAY,
-              size: height / 70,
+              size: height / 55,
             ),
           ))
         ],

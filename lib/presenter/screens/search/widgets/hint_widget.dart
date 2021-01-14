@@ -31,7 +31,7 @@ class HintWidgetState extends State<HintWidget> {
             textColor: AppColors.BLACK,
             fontWeight: FontWeight.w700,
             textAlign: TextAlign.left,
-            size: height / 55),
+            size: height / 50),
       );
     } else {
       return Container(

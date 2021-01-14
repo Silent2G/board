@@ -42,11 +42,11 @@ class SearchWidgetState extends State<SearchWidget> {
             )
           : Container(
               child: TitleText(
-                "0.0 g",
+                "1234.5 g",
                 fontWeight: FontWeight.w400,
                 fontFamily: "Elektra",
                 textColor: AppColors.BLACK,
-                size: height / 25,
+                size: height / 20,
               ),
             );
     } else {

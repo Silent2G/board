@@ -71,7 +71,7 @@ class SlidingListItemState extends State<SlidingListItem> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         SizedBox(
-                          height: height / 100,
+                          height: height / 80, // top padding
                         ),
                         Container(
                           width: width,
@@ -81,12 +81,12 @@ class SlidingListItemState extends State<SlidingListItem> {
                                   textColor: chooseTextColor(),
                                   fontWeight: FontWeight.w500,
                                   textAlign: TextAlign.left,
-                                  size: height / 53,
+                                  size: height / 50, // notification name font size
                                 )
                               : Container(),
                         ),
                         SizedBox(
-                          height: height / 140,
+                          height: height / 200, // padding between text
                         ),
                         Container(
                           width: width,
@@ -96,12 +96,12 @@ class SlidingListItemState extends State<SlidingListItem> {
                                   textColor: chooseTextColor(),
                                   fontWeight: FontWeight.w400,
                                   textAlign: TextAlign.left,
-                                  size: height / 58,
+                                  size: height / 56, // notification description font size
                                 )
                               : Container(),
                         ),
                         SizedBox(
-                          height: height / 100,
+                          height: height / 80, // bottom padding
                         ),
                       ],
                     ),

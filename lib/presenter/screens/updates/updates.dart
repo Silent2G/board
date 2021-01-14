@@ -69,7 +69,7 @@ class UpdatesState extends State<Updates> {
                                   textColor: AppColors.BLACK,
                                   fontFamily: "Roboto",
                                   fontWeight: FontWeight.w400,
-                                  size: height / 60,
+                                  size: height / 50,
                                 ),
                               ),
                             ),

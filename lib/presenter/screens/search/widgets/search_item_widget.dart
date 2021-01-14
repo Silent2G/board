@@ -32,7 +32,7 @@ class SearchItemWidget extends StatelessWidget {
                 item.name,
                 textColor: AppColors.BLACK,
                 fontWeight: FontWeight.w400,
-                size: height / 55,
+                size: height / 50,
               ),
             ),
             Container(
@@ -45,7 +45,7 @@ class SearchItemWidget extends StatelessWidget {
                       item.units[0].toString() + " grams ",
                       fontWeight: FontWeight.w100,
                       textColor: AppColors.UPDATE_GRAY,
-                      size: height / 60,
+                      size: height / 50,
                     ),
                   ),
                   Container(
@@ -53,7 +53,7 @@ class SearchItemWidget extends StatelessWidget {
                       item.calories.toString() + " kkal",
                       textColor: AppColors.UPDATE_GRAY,
                       fontWeight: FontWeight.w100,
-                      size: height / 60,
+                      size: height / 50,
                     ),
                   ),
                 ],

@@ -23,7 +23,7 @@ class SearchNameWidget extends StatelessWidget {
               name,
               textColor: AppColors.BLACK,
               fontWeight: FontWeight.w700,
-              size: height / 50,
+              size: height / 45,
             ),
           ),
           SizedBox(
@@ -39,7 +39,7 @@ class SearchNameWidget extends StatelessWidget {
                     weight.toString() + " g - ",
                     textColor: AppColors.BLACK,
                     fontWeight: FontWeight.w700,
-                    size: height / 60,
+                    size: height / 50,
                   ),
                 ),
                 Container(
@@ -47,7 +47,7 @@ class SearchNameWidget extends StatelessWidget {
                     calories.toString() + " kkal",
                     textColor: AppColors.BLACK,
                     fontWeight: FontWeight.w700,
-                    size: height / 60,
+                    size: height / 50,
                   ),
                 )
               ],

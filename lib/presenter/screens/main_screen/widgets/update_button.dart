@@ -32,8 +32,8 @@ class UpdateButtonState extends State<UpdateButton> {
                       Updates(updateState: UpdateState.UPGRADE)));
         },
         child: Container(
-            width: height / 12,
-            height: height / 12,
+            width: height / 10, // update circle size
+            height: height / 10, // update circle size
             decoration:
                 BoxDecoration(color: AppColors.WHITE, shape: BoxShape.circle),
             child: Center(
@@ -49,13 +49,13 @@ class UpdateButtonState extends State<UpdateButton> {
                       color: AppColors.UPDATE_GRAY,
                     ),
                   ),
-                  SizedBox(height: height / 150),
+                  SizedBox(height: height / 200), // hr size
                   Container(
                     child: TitleText(
                       AppLocalizations.of(context).translate("updates"),
                       fontWeight: FontWeight.w400,
                       fontFamily: "Roboto",
-                      size: height / 70,
+                      size: height / 55, // text updates font size
                       textColor: AppColors.UPDATE_GRAY,
                     ),
                   )

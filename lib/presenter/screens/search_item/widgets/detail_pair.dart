@@ -26,7 +26,7 @@ class DetailPair extends StatelessWidget {
             child: TitleText(
               AppLocalizations.of(context).translate(title),
               textColor: AppColors.BLACK,
-              size: height / 65,
+              size: height / 50,
               fontWeight: fatText != null && fatText
                   ? FontWeight.w700
                   : FontWeight.w400,
@@ -36,7 +36,7 @@ class DetailPair extends StatelessWidget {
             child: TitleText(
               getValueText(),
               textColor: AppColors.BLACK,
-              size: height / 65,
+              size: height / 50,
               fontWeight: fatText != null && fatText
                   ? FontWeight.w700
                   : FontWeight.w400,

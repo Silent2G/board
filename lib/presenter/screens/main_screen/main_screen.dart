@@ -27,7 +27,7 @@ class MinScreenState extends State<MainScreen> {
     return Container(
       child: Scaffold(
         body: SlidingUpPanel(
-            minHeight: height / 4,
+            minHeight: height / 3.7,
             maxHeight: height / 1.5,
             boxShadow: [
               BoxShadow(

@@ -28,7 +28,7 @@ class DetailItemState extends State<DetailItem> {
           Container(
             child: TitleText(
               AppLocalizations.of(context).translate(widget.title),
-              size: height / 60,
+              size: height / 50,
               textColor: AppColors.BLACK,
               fontWeight: FontWeight.w700,
             ),
@@ -44,7 +44,7 @@ class DetailItemState extends State<DetailItem> {
                 vertical: height / 45, horizontal: height / 30),
             child: TitleText(
               widget.value,
-              size: height / 60,
+              size: height / 50,
               textColor: AppColors.BLACK,
               fontWeight: FontWeight.w700,
             ),

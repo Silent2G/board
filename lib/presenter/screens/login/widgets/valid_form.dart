@@ -68,29 +68,18 @@ class SignUpValidFormState extends State<SignUpValidForm> {
               ),
               SizedBox(height: height / 35),
               Container(
-                child: WillPopScope(
-                  onWillPop: () {
-                    print("fsgdhggsfafsgfdhgs");
-                    return editNamePop();
-                  },
-                  child: EditNameWidget(
-                    controller: nameController,
-                    hintValue: "your_name",
-                    node: node,
-                  ),
-                )
+                child: EditNameWidget(
+                  controller: nameController,
+                  hintValue: "your_name",
+                  node: node,
+                ),
               ),
               SizedBox(height: height / 45),
               Container(
-                child: WillPopScope(
-                  onWillPop: () {
-                    return editNamePop();
-                  },
-                  child: EmailWidget(
-                    hintValue: "email",
-                    node: node,
-                  ),
-                )
+                child: EmailWidget(
+                  hintValue: "email",
+                  node: node,
+                ),
               ),
               SizedBox(height: height / 25),
               Container(
@@ -105,12 +94,6 @@ class SignUpValidFormState extends State<SignUpValidForm> {
             ],
           )),
     );
-  }
-
-  Future<bool> editNamePop() async {
-    print("blalaaalalalalalallaalallala");
-    // FocusScope.of(context).unfocus();
-    return Future.value(true);
   }
 
   void validationFields() {

@@ -61,33 +61,36 @@ class SearchInputText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width  = MediaQuery.of(context).size.width;
     return Container(
-      padding: EdgeInsets.only(left: height / 60),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(height / 50),
         color: AppColors.GRAY.withOpacity(0.2)
       ),
-      child: TextFormField(
-        controller: textEditingController,
-        decoration: InputDecoration(
-          hintText: hint,
-          border: InputBorder.none,
-          focusedBorder: InputBorder.none,
-          enabledBorder: InputBorder.none,
-          errorBorder: InputBorder.none,
-          disabledBorder: InputBorder.none,
-          hintStyle: TextStyle(
-              fontFamily: fontFamily != null ? fontFamily : "Roboto",
-              fontSize: size,
-              fontWeight: FontWeight.w400,
-              color: textColor != null ? textColor : AppColors.BLACK.withOpacity(0.3)),
-          suffixIcon: Container(
-            child: suffixIcon,
+      child: Center(
+        child: TextFormField(
+          controller: textEditingController,
+          decoration: InputDecoration(
+            hintText: hint,
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            contentPadding: EdgeInsets.only(left: height / 60, bottom: height / 50, top: height / 50),
+            hintStyle: TextStyle(
+                fontFamily: fontFamily != null ? fontFamily : "Roboto",
+                fontSize: size,
+                fontWeight: FontWeight.w400,
+                color: textColor != null ? textColor : AppColors.BLACK.withOpacity(0.3)),
+            suffixIcon: Container(
+              child: suffixIcon,
+            ),
           ),
+          onChanged: onChanged,
+          onSaved: onSaved,
         ),
-        onChanged: onChanged,
-        onSaved: onSaved,
-      ),
+      )
     );
   }
 }

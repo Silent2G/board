@@ -37,9 +37,12 @@ class SlidingScreenState extends State<SlidingScreen> {
               child: SvgPicture.asset(
                 widget.arrowPath,
                 color: AppColors.BLACK,
-                width: height / 60,
-                height: height / 60,
+                width: height / 50,
+                height: height / 50,
               ),
+            ),
+            SizedBox(
+              height: height / 80,
             ),
             Expanded(
                 child: ScrollWrap(
@@ -71,7 +74,7 @@ class SlidingScreenState extends State<SlidingScreen> {
 List<BoardNotification> list = [
   BoardNotification(
       1,
-      "New board software update available!",
+      "New board software update available! ",
       "Tap here to update",
       "U",
       "G",

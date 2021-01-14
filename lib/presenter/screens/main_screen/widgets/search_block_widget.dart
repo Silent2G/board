@@ -30,19 +30,19 @@ class SearchBlockWidgetState extends State<SearchBlockWidget> {
             child: TitleText(
               getStringByState(),
               textColor: AppColors.BLACK,
-              size: height / 60,
+              size: height / 50,
               height: 1.5,
               fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: height / 40),
           Container(
-            width: height / 4,
-            height: height / 4,
+            width: height / 3.5,
+            height: height / 3.5,
             child: ArcProgressBar(
               foregroundColor: AppColors.WHITE,
               searchState: widget.searchState,
-              value: 0.8,
+              value: 0.7,
             ),
           )
         ],

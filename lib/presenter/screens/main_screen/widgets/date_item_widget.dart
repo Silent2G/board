@@ -25,9 +25,6 @@ class DayItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
-            height: height / 50,
-          ),
           Container(
             width: width,
             padding: EdgeInsets.only(left: height / 50),

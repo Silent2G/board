@@ -51,7 +51,7 @@ class ColorButton extends StatelessWidget {
                       textColor: AppColors.WHITE,
                       fontWeight: FontWeight.w600,
                       fontFamily: "Roboto",
-                      size: h / 52,
+                      size: h / 50,
                     ),
             )),
       ),

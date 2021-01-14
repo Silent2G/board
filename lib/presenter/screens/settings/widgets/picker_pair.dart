@@ -70,7 +70,7 @@ class PickerPairState extends State<PickerPair> {
                         'Pick a color!',
                         fontWeight: FontWeight.w400,
                         fontFamily: "Roboto",
-                        size: height / 60,
+                        size: height / 50,
                       ),
                       content: SingleChildScrollView(
                         child: ColorPicker(
@@ -87,7 +87,7 @@ class PickerPairState extends State<PickerPair> {
                             'Got it',
                             fontWeight: FontWeight.w400,
                             fontFamily: 'Roboto',
-                            size: height / 60,
+                            size: height / 50,
                           ),
                           onPressed: () {
                             setState(() => currentColor = pickerColor);
