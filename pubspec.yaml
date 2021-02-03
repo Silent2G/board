@@ -44,6 +44,7 @@ dependencies:
   intl: ^0.16.1
   url_launcher: ^5.7.10
   flutter_colorpicker: ^0.3.4
+  provider: ^4.3.2+2
 
 dev_dependencies:
   flutter_test:
